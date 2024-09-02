@@ -57,18 +57,3 @@ class RagPLU:
         self.vector_store = None
         self.retriever = None
         self.chain = None
-
-#### Utilisation de la classe ####
-
-# 1. Instanciation de la classe
-pdf_query = RagPLU() # paramètres par défaut
-
-# 2. Ingestion du PDF
-pdf_query.ingest("plu_0.pdf")
-
-# 3. Question
-answer = pdf_query.ask("Quelle est la hauteur maximum des constructions dans la zone U1 ?")
-print(answer)
-
-# 4. Effacer les variables stockées
-pdf_query.clear()
